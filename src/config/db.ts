@@ -17,4 +17,8 @@ sequelizer
     console.error("Unable to connect to the database:", err);
   });
 
+sequelizer.sync({ alter: true }).then(() => {
+  console.log("All models were synchronized successfully.");
+});
+
 export default sequelizer;
